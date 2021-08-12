@@ -23,6 +23,7 @@ namespace ClaseTeorica1208
 
         public static void loops()
         {
+
             int[] numbers = new int[3];
             numbers[0] = 5;
             numbers[1] = 10;
@@ -73,6 +74,9 @@ namespace ClaseTeorica1208
             {
                 int[] arraynumeros = new int[10];
 
+                int sumaTotal=0;
+                double promedio;
+
                 int n = 0;
                 
                 while (n < arraynumeros.Length)
@@ -95,6 +99,18 @@ namespace ClaseTeorica1208
                     Console.WriteLine(arraynumeros[m]);
                     m++;
                 }
+
+                Console.WriteLine();
+
+                //Calculando Promedio
+                for (int count = 0; count < 10; count++)
+                {
+                    sumaTotal = sumaTotal + arraynumeros[count];
+                }
+                promedio = sumaTotal / arraynumeros.Length;
+
+                Console.WriteLine("El promedio de los datos ingresados es: {0}", promedio);
+                
             }
         }
     }
